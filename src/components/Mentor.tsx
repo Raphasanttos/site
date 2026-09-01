@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import mentorPhoto from "../assets/mentor.jpg";
 import { CONTACT } from "../lib/constants";
 import { Reveal } from "./Reveal";
 import { InstagramIcon, LinkedinIcon } from "./icons/BrandIcons";
@@ -15,12 +16,14 @@ export function Mentor() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal direction="right">
-            <div className="relative mx-auto max-w-sm">
+            <div className="relative mx-auto max-w-xs">
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-(--color-neon)/25 via-transparent to-(--color-navy-glow)/25 blur-2xl" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-(--color-border) bg-(--color-surface-2)">
-                <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-(--color-navy) via-(--color-ink-2) to-(--color-surface)">
-                  <span className="font-display text-7xl font-bold text-(--color-neon)/70">RS</span>
-                </div>
+              <div className="relative aspect-square overflow-hidden rounded-[1.75rem] border border-(--color-border) bg-(--color-surface-2)">
+                <img
+                  src={mentorPhoto}
+                  alt="Raphael Santos, mentor da Formação SDR"
+                  className="h-full w-full object-cover"
+                />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-(--color-ink) via-(--color-ink)/70 to-transparent p-6">
                   <p className="font-display text-lg font-bold text-(--color-ivory)">Raphael Santos</p>
                   <p className="text-sm text-(--color-neon-soft)">Fundador — Formação SDR</p>
