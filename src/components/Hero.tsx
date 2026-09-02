@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 
 const bullets = [
   { icon: Radio, label: "100% ao vivo" },
-  { icon: Target, label: "2 encontros diretos ao ponto" },
+  { icon: Target, label: "3 encontros diretos ao ponto" },
   { icon: Users2, label: "Networking com empresas" },
 ];
 

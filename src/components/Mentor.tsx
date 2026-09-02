@@ -1,6 +1,7 @@
 import { Quote } from "lucide-react";
 import mentorPhoto from "../assets/mentor.jpg";
 import { CONTACT } from "../lib/constants";
+import { Methodology } from "./Methodology";
 import { Reveal } from "./Reveal";
 import { InstagramIcon, LinkedinIcon } from "./icons/BrandIcons";
 
@@ -70,6 +71,15 @@ export function Mentor() {
                   e, de alguma forma, mudando vidas. A Formação SDR nasceu para posicionar quem
                   quer realmente bater meta e evoluir em pré-vendas — sem enrolação, direto ao ponto.
                 </p>
+                <p className="mt-4 text-(--color-muted) leading-relaxed">
+                  Sou Raphael, casado, pai e hoje Gerente comercial com mais de 5 anos treinando e
+                  liderando times de vendas. E vivi na pele cada etapa dessa profissão — da primeira
+                  ligação fria até a gestão de times de alta performance. Tive resultados expressivos
+                  gerando receita recorrente nas empresas onde trabalhei, com prospecção ativa que
+                  reduziu o CAC e gerou oportunidades sem custo para a operação, e também tive
+                  sucesso como Closer. Decidi compartilhar esse conhecimento com quem está
+                  começando, porque sei que o caminho certo faz toda a diferença.
+                </p>
               </div>
             </Reveal>
 
@@ -85,6 +95,8 @@ export function Mentor() {
             </Reveal>
           </div>
         </div>
+
+        <Methodology />
       </div>
     </section>
   );

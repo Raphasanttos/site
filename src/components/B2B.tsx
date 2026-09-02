@@ -15,7 +15,12 @@ const offers = [
     icon: Layers3,
     title: "Implementação de times de pré-vendas",
     text: "Estruturação completa da operação de SDR/BDR para pequenas e médias empresas que ainda não têm um time de pré-vendas.",
-    bullets: ["Desenho do processo e funil", "Definição de métricas e metas", "Contratação e onboarding do time"],
+    bullets: [
+      "Desenho do processo e funil",
+      "Definição de métricas e metas",
+      "Contratação e onboarding do time",
+      "Treinamento completo do time",
+    ],
   },
 ];
 

@@ -62,7 +62,7 @@ export function Program() {
             </Reveal>
             <Reveal delay={0.12}>
               <p className="mt-5 text-(--color-muted)">
-                Uma mentoria 100% ao vivo, com 2 encontros diretos ao ponto — sem enrolação,
+                Uma mentoria 100% ao vivo, com 3 encontros diretos ao ponto — sem enrolação,
                 sem teoria solta. Você aprende fazendo, com quem já viveu a rotina de bater meta.
               </p>
             </Reveal>

@@ -9,9 +9,6 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold text-(--color-ivory)">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-(--color-neon) text-sm font-black text-(--color-ink)">
-                SDR
-              </span>
               Formação SDR
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-(--color-muted)">

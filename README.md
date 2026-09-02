@@ -26,8 +26,8 @@ npm run lint      # oxlint
 
 ```
 src/
-  components/       # Navbar, Hero, Problem, Program, Mentor, Testimonials,
-                     # B2B, FinalCta, Footer, WhatsAppFloat, ScrollProgress
+  components/       # Navbar, Hero, Problem, Program, Mentor, Methodology,
+                     # Testimonials, B2B, FinalCta, Footer, WhatsAppFloat, ScrollProgress
   components/icons/  # ícones de marca (Instagram, LinkedIn)
   lib/constants.ts   # link do WhatsApp, contatos, links de navegação
   lib/motion.ts       # variantes de animação compartilhadas
@@ -57,6 +57,33 @@ ser hospedado em qualquer provedor de sites estáticos. Recomendado:
 1. Importe o repositório em [app.netlify.com](https://app.netlify.com).
 2. Build command: `npm run build` · Publish directory: `dist` (o arquivo `public/_redirects` já cuida do fallback de rotas).
 3. Adicione o domínio próprio em **Site settings → Domain management**.
+
+### Conectando um domínio comprado no registro.br
+
+O domínio já foi comprado no [registro.br](https://registro.br). Para apontá-lo
+para o deploy (Vercel ou Netlify), o DNS precisa ser configurado no painel do
+registro.br:
+
+1. Faça o deploy do projeto primeiro (Vercel ou Netlify) e adicione o domínio
+   em **Settings → Domains** (Vercel) ou **Domain management** (Netlify) — a
+   plataforma vai mostrar os registros DNS exatos a usar (eles podem mudar
+   com o tempo, então siga o que aparecer na tela nesse momento).
+2. Acesse [registro.br](https://registro.br) → **Painel** → selecione o
+   domínio → **DNS**.
+3. Se o domínio ainda estiver usando os DNS padrão do registro.br, crie os
+   registros indicados pela Vercel/Netlify:
+   - **Domínio raiz** (ex.: `formacaosdr.com.br`): registro **A** apontando
+     para o IP informado pela plataforma (ex.: `76.76.21.21` na Vercel).
+   - **Subdomínio `www`**: registro **CNAME** apontando para o host informado
+     (ex.: `cname.vercel-dns.com.` na Vercel, ou `<site>.netlify.app.` na
+     Netlify).
+4. Salve e aguarde a propagação (pode levar de minutos a algumas horas).
+5. Volte na Vercel/Netlify e confirme que o domínio ficou com o status
+   "válido"/"verificado" — o certificado SSL é emitido automaticamente.
+
+> Isso precisa ser feito por quem tem acesso à conta do registro.br e da
+> Vercel/Netlify — assim que o deploy estiver no ar, me passe os dados
+> (ou me dê acesso) que eu confirmo os registros certos com você.
 
 ## Tráfego pago (Meta/Google Ads)
 
