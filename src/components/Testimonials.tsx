@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { CheckCheck, MessageSquareText } from "lucide-react";
+import { CheckCheck, MessageSquareText, Quote } from "lucide-react";
 import { Reveal, RevealGroup } from "./Reveal";
 import { revealItem } from "../lib/motion";
+import { InstagramIcon } from "./icons/BrandIcons";
 
 const testimonials = [
   {
@@ -15,6 +16,45 @@ const testimonials = [
     message:
       "Vi o trabalho que você vem construindo com a Escola SDR e curti muito a forma como você posiciona a formação pra quem quer realmente bater meta e evoluir em pré vendas. Muito bom seu trabalho, parabéns 👏🏽",
     reply: "O meu irmão, obrigado pelo seu feedback! Deus colocou esse projeto no meu coração e aos poucos venho avançando.",
+  },
+];
+
+const quotes = [
+  {
+    name: null,
+    role: "Aluno(a) da Formação SDR",
+    text: "Passando pra te dar um feedback da formação: tem me ajudado muito no meu dia a dia, estou conseguindo agendar mais reuniões e já estou com a meta quase batida. Os conteúdos da plataforma têm me ajudado muito!",
+  },
+  {
+    name: null,
+    role: "Aluno(a) da Formação SDR",
+    text: "Uma pessoa com conhecimento vasto e de grande humildade. Consegue passar tranquilidade e transmitir conhecimento de forma clara. Indico a todos.",
+  },
+  {
+    name: null,
+    role: "Aluno(a) da Formação SDR",
+    text: "Você me apresentou um mundo que eu ainda não conhecia, mas que hoje faz total sentido pra mim. Meu objetivo agora é me tornar uma SDR de alta performance — e não poderia ter começado com um mentor melhor.",
+  },
+  {
+    name: "Denilson Gomes",
+    role: "@denilson_gomes23 · Instagram",
+    icon: InstagramIcon,
+    text: "Eu estava 6 meses parado. Com a mentoria do Raphael consegui uma vaga em menos de 1 semana. Foi um dos melhores investimentos que fiz ultimamente.",
+  },
+  {
+    name: null,
+    role: "Aluno(a) da Formação SDR",
+    text: "Aprender a identificar cada perfil de cliente me ajudou a vender da forma que o cliente quer comprar, e não da forma que eu queria vender. Hoje estou vendendo de forma muito mais fluida.",
+  },
+  {
+    name: null,
+    role: "Aluna da Formação SDR",
+    text: "Investir na sua mentoria foi uma das melhores coisas que eu fiz. Suas dicas, sua paciência e sua forma de explicar fizeram muita diferença. Hoje me sinto muito mais segura e preparada.",
+  },
+  {
+    name: "Maria Eduarda",
+    role: "Aluna da Formação SDR",
+    text: "Cara, realmente me encontrei nessa área. Mais uma vez, só tenho a agradecer a você.",
   },
 ];
 
@@ -73,6 +113,29 @@ export function Testimonials() {
           ))}
         </RevealGroup>
       </div>
+
+      <Reveal delay={0.2} className="mt-12">
+        <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+          <div className="flex w-max gap-5 animate-marquee group-hover:[animation-play-state:paused]">
+            {[...quotes, ...quotes].map((q, i) => {
+              const Icon = q.icon ?? Quote;
+              return (
+                <div
+                  key={`${q.text}-${i}`}
+                  className="flex w-[320px] shrink-0 flex-col rounded-2xl border border-(--color-border) bg-(--color-surface) p-5"
+                >
+                  <Icon className="h-5 w-5 text-(--color-neon)/60" />
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-(--color-muted)">{q.text}</p>
+                  <p className="mt-4 text-xs font-semibold text-(--color-ivory)">
+                    {q.name ?? "Feedback recebido no WhatsApp"}
+                    <span className="block font-normal text-(--color-muted-2)">{q.role}</span>
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </Reveal>
     </section>
   );
 }
