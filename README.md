@@ -42,51 +42,51 @@ todo o site de uma vez.
 
 ## Hospedagem e domínio
 
-O projeto gera um build estático (`npm run build` → pasta `dist/`), então pode
-ser hospedado em qualquer provedor de sites estáticos. Recomendado:
+O projeto gera um build estático (`npm run build` → pasta `dist/`). **O deploy
+já está no ar na Netlify**, em **https://formacaosdr.netlify.app** (Build
+command: `npm run build` · Publish directory: `dist` — o arquivo
+`public/_redirects` já cuida do fallback de rotas).
 
-### Vercel (recomendado)
+### Conectando o domínio `formaçãosdr.com.br` (comprado no registro.br) à Netlify
 
-1. Importe este repositório em [vercel.com/new](https://vercel.com/new).
-2. Framework preset: **Vite** (detectado automaticamente).
-3. Build command: `npm run build` · Output directory: `dist` (já configurado em `vercel.json`).
-4. Depois do primeiro deploy, vá em **Settings → Domains** e adicione o domínio próprio `formaçãosdr.com.br` (forma ASCII/punycode: `xn--formaosdr-p2a7b.com.br` — é assim que ele aparece no DNS), apontando o DNS do registrador para os nameservers/CNAME indicados pela Vercel.
+O domínio já foi comprado no [registro.br](https://registro.br). Como ele tem
+acento/cedilha, o DNS/painel vai referenciar a versão ASCII (punycode) dele:
+`xn--formaosdr-p2a7b.com.br` — é normal aparecer assim, é o mesmo domínio.
+Isso precisa ser feito por quem tem acesso às contas da Netlify e do
+registro.br (eu não tenho essas credenciais nem uma ferramenta de deploy
+aqui), mas o passo a passo é:
 
-### Netlify (alternativa)
+**1. Na Netlify** (site `formacaosdr.netlify.app`):
+   - **Site configuration → Domain management → Add a domain**.
+   - Digite `formaçãosdr.com.br` (a Netlify aceita acentuação e converte
+     sozinha para `xn--formaosdr-p2a7b.com.br` internamente).
+   - Quando perguntar sobre DNS, escolha a opção de **manter o DNS no
+     registro.br** (não usar "Netlify DNS"), já que o domínio já está lá.
+   - A Netlify vai mostrar os registros exatos a criar — normalmente:
+     - Domínio raiz → registro **A** apontando para `75.2.60.5`
+     - `www` → registro **CNAME** apontando para `formacaosdr.netlify.app`
+   - **Siga os valores que aparecerem na tela da Netlify nesse momento**,
+     caso sejam diferentes dos acima (a Netlify pode atualizar o IP).
 
-1. Importe o repositório em [app.netlify.com](https://app.netlify.com).
-2. Build command: `npm run build` · Publish directory: `dist` (o arquivo `public/_redirects` já cuida do fallback de rotas).
-3. Adicione o domínio próprio em **Site settings → Domain management**.
+**2. No registro.br:**
+   - Acesse [registro.br](https://registro.br) → **Painel** → selecione o
+     domínio → **DNS** (ou "Editar Zona").
+   - Crie os dois registros indicados pela Netlify:
+     - **A** — host `@` (ou em branco/raiz) → `75.2.60.5`
+     - **CNAME** — host `www` → `formacaosdr.netlify.app.`
+   - Salve. O registro.br costuma levar de alguns minutos a algumas horas
+     para propagar.
 
-### Conectando o domínio `formaçãosdr.com.br` (comprado no registro.br)
+**3. De volta na Netlify:**
+   - Aguarde o status do domínio mudar para "Netlify DNS verificado" /
+     "DNS verification succeeded" e ative o **HTTPS** (Let's Encrypt) em
+     **Domain management → HTTPS** — é automático assim que o DNS propaga.
+   - Defina `formaçãosdr.com.br` como **domínio primário** para que
+     `formacaosdr.netlify.app` redirecione para ele.
 
-O domínio **formaçãosdr.com.br** já foi comprado no
-[registro.br](https://registro.br). Como ele tem acento/cedilha, o DNS/painel
-vai referenciar a versão ASCII (punycode) dele: `xn--formaosdr-p2a7b.com.br` —
-é normal aparecer assim, é o mesmo domínio.
-
-1. Faça o deploy do projeto primeiro (Vercel ou Netlify) e adicione o domínio
-   em **Settings → Domains** (Vercel) ou **Domain management** (Netlify),
-   digitando `formaçãosdr.com.br` (ou a versão `xn--...`, tanto faz) — a
-   plataforma vai mostrar os registros DNS exatos a usar (eles podem mudar
-   com o tempo, então siga o que aparecer na tela nesse momento).
-2. Acesse [registro.br](https://registro.br) → **Painel** → selecione o
-   domínio → **DNS**.
-3. Se o domínio ainda estiver usando os DNS padrão do registro.br, crie os
-   registros indicados pela Vercel/Netlify:
-   - **Domínio raiz** (`formaçãosdr.com.br`): registro **A** apontando
-     para o IP informado pela plataforma (ex.: `76.76.21.21` na Vercel).
-   - **Subdomínio `www`**: registro **CNAME** apontando para o host informado
-     (ex.: `cname.vercel-dns.com.` na Vercel, ou `<site>.netlify.app.` na
-     Netlify).
-4. Salve e aguarde a propagação (pode levar de minutos a algumas horas).
-5. Volte na Vercel/Netlify e confirme que o domínio ficou com o status
-   "válido"/"verificado" — o certificado SSL é emitido automaticamente.
-
-> Isso precisa ser feito por quem tem acesso à conta do registro.br e da
-> Vercel/Netlify — não tenho essas credenciais nem uma ferramenta de deploy
-> aqui. Assim que o site estiver publicado em algum lugar, me avisa (pode ser
-> só o link) que eu confirmo com vocês se os registros DNS estão certos.
+> Assim que os registros estiverem criados no registro.br, me avisa (ou manda
+> um print da tela de Domain management da Netlify) que eu confirmo se está
+> tudo certo e se falta algum ajuste.
 
 ## Tráfego pago (Meta/Google Ads)
 

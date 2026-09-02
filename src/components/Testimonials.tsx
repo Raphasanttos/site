@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
-import { CheckCheck, MessageSquareText, Quote } from "lucide-react";
+import { CheckCheck, Heart, MessageSquareText, Quote } from "lucide-react";
 import { Reveal, RevealGroup } from "./Reveal";
 import { revealItem } from "../lib/motion";
 import { InstagramIcon } from "./icons/BrandIcons";
+
+const instagramFeatured = {
+  handle: "denilson_gomes23",
+  likes: 3,
+  text: "Eu estava 6 meses parado. Com a mentoria do Raphael consegui uma vaga em menos de 1 semana. Esse cara é fera, foi um dos se não o melhor investimento que fiz ultimamente — já atuava com vendas, mas com o direcionamento do Raphael consegui rapidinho uma oportunidade de contrato muito bom. Deus continue te abençoando, meu irmão 🚀🚀",
+};
 
 const testimonials = [
   {
@@ -34,12 +40,6 @@ const quotes = [
     name: null,
     role: "Aluno(a) da Formação SDR",
     text: "Você me apresentou um mundo que eu ainda não conhecia, mas que hoje faz total sentido pra mim. Meu objetivo agora é me tornar uma SDR de alta performance — e não poderia ter começado com um mentor melhor.",
-  },
-  {
-    name: "Denilson Gomes",
-    role: "@denilson_gomes23 · Instagram",
-    icon: InstagramIcon,
-    text: "Eu estava 6 meses parado. Com a mentoria do Raphael consegui uma vaga em menos de 1 semana. Foi um dos melhores investimentos que fiz ultimamente.",
   },
   {
     name: null,
@@ -74,12 +74,34 @@ export function Testimonials() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="mt-4 text-(--color-muted)">
-              Feedbacks reais recebidos diretamente no WhatsApp por quem já passou pelo acompanhamento.
+              Feedbacks reais recebidos no WhatsApp e nas redes sociais por quem já passou pelo acompanhamento.
             </p>
           </Reveal>
         </div>
 
-        <RevealGroup className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2" stagger={0.16}>
+        <RevealGroup className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3" stagger={0.16}>
+          <motion.div
+            variants={revealItem}
+            whileHover={{ y: -4 }}
+            className="flex flex-col rounded-2xl border border-(--color-neon)/25 bg-(--color-surface) p-5 shadow-[0_20px_60px_-30px_rgba(60,255,158,0.35)]"
+          >
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-(--color-navy) to-(--color-surface-2) text-xs font-bold text-(--color-neon-soft)">
+                DG
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-sm font-semibold text-(--color-ivory)">{instagramFeatured.handle}</p>
+                <p className="text-xs text-(--color-muted-2)">pelo autor</p>
+              </div>
+              <InstagramIcon className="h-4 w-4 shrink-0 text-(--color-muted-2)" />
+            </div>
+            <p className="mt-4 flex-1 text-sm leading-relaxed text-(--color-ivory)">{instagramFeatured.text}</p>
+            <div className="mt-4 flex items-center gap-1.5 border-t border-(--color-border) pt-3 text-xs font-medium text-(--color-muted-2)">
+              <Heart className="h-3.5 w-3.5 fill-(--color-neon) text-(--color-neon)" />
+              {instagramFeatured.likes} · Comentário no Instagram
+            </div>
+          </motion.div>
+
           {testimonials.map((t) => (
             <motion.div
               key={t.role}
@@ -118,13 +140,12 @@ export function Testimonials() {
         <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
           <div className="flex w-max gap-5 animate-marquee group-hover:[animation-play-state:paused]">
             {[...quotes, ...quotes].map((q, i) => {
-              const Icon = q.icon ?? Quote;
               return (
                 <div
                   key={`${q.text}-${i}`}
                   className="flex w-[320px] shrink-0 flex-col rounded-2xl border border-(--color-border) bg-(--color-surface) p-5"
                 >
-                  <Icon className="h-5 w-5 text-(--color-neon)/60" />
+                  <Quote className="h-5 w-5 text-(--color-neon)/60" />
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-(--color-muted)">{q.text}</p>
                   <p className="mt-4 text-xs font-semibold text-(--color-ivory)">
                     {q.name ?? "Feedback recebido no WhatsApp"}
