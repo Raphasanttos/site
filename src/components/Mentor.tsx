@@ -18,7 +18,10 @@ export function Mentor() {
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal direction="right">
             <div className="relative mx-auto max-w-sm">
-              <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-(--color-neon)/25 via-transparent to-(--color-navy-glow)/25 blur-2xl" />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-(--color-neon)/25 via-transparent to-(--color-navy-glow)/25 blur-2xl"
+              />
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-(--color-border) bg-(--color-surface-2)">
                 <img
                   src={mentorPhoto}
