@@ -17,13 +17,13 @@ export function Mentor() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal direction="right">
-            <div className="relative mx-auto max-w-xs">
+            <div className="relative mx-auto max-w-sm">
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-(--color-neon)/25 via-transparent to-(--color-navy-glow)/25 blur-2xl" />
-              <div className="relative aspect-square overflow-hidden rounded-[1.75rem] border border-(--color-border) bg-(--color-surface-2)">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-(--color-border) bg-(--color-surface-2)">
                 <img
                   src={mentorPhoto}
                   alt="Raphael Santos, mentor da Formação SDR"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-top"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-(--color-ink) via-(--color-ink)/70 to-transparent p-6">
                   <p className="font-display text-lg font-bold text-(--color-ivory)">Raphael Santos</p>
