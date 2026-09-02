@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, Building2, Layers3 } from "lucide-react";
 import { Reveal, RevealGroup } from "./Reveal";
 import { revealItem } from "../lib/motion";
@@ -48,7 +48,7 @@ export function B2B() {
 
         <RevealGroup className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2" stagger={0.15}>
           {offers.map(({ icon: Icon, title, text, bullets }) => (
-            <motion.div
+            <m.div
               key={title}
               variants={revealItem}
               whileHover={{ y: -6 }}
@@ -76,7 +76,7 @@ export function B2B() {
                 Falar sobre esse serviço
                 <ArrowUpRight className="h-4 w-4" />
               </a>
-            </motion.div>
+            </m.div>
           ))}
         </RevealGroup>
       </div>

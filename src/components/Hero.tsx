@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight, Radio, Target, Users2 } from "lucide-react";
 import { whatsappLink } from "../lib/constants";
 import { Reveal } from "./Reveal";
@@ -14,17 +13,15 @@ export function Hero() {
     <section id="top" className="relative overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
       <div className="pointer-events-none absolute inset-0 grid-overlay [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,#000_10%,transparent_70%)]" />
 
-      <motion.div
+      <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-(--color-neon)/20 blur-[120px]"
-        animate={{ opacity: [0.5, 0.85, 0.5] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-(--color-neon)/20 blur-[120px] animate-pulse-glow"
       />
-      <motion.div
+      <div
         aria-hidden
         className="pointer-events-none absolute -bottom-40 -right-20 h-[420px] w-[420px] rounded-full bg-(--color-navy-glow)/30 blur-[110px] animate-float"
       />
-      <motion.div
+      <div
         aria-hidden
         className="pointer-events-none absolute -bottom-20 -left-24 h-[320px] w-[320px] rounded-full bg-(--color-navy-glow)/20 blur-[100px] animate-float"
         style={{ animationDelay: "1.5s" }}

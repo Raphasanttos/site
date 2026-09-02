@@ -1,7 +1,7 @@
 import { AlertCircle, Clock3, TrendingDown, Wallet } from "lucide-react";
 import { Reveal, RevealGroup } from "./Reveal";
 import { revealItem } from "../lib/motion";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const pains = [
   {
@@ -50,7 +50,7 @@ export function Problem() {
 
         <RevealGroup className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {pains.map(({ icon: Icon, title, text }) => (
-            <motion.div
+            <m.div
               key={title}
               variants={revealItem}
               whileHover={{ y: -6 }}
@@ -62,7 +62,7 @@ export function Problem() {
               <h3 className="font-display text-base font-semibold text-(--color-ivory)">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-(--color-muted)">{text}</p>
               <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-(--color-neon)/0 blur-2xl transition-all duration-500 group-hover:bg-(--color-neon)/15" />
-            </motion.div>
+            </m.div>
           ))}
         </RevealGroup>
       </div>

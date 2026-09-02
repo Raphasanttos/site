@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { ChevronDown, Compass, Users, Workflow } from "lucide-react";
 import { useState } from "react";
 import { Reveal } from "./Reveal";
@@ -60,7 +60,7 @@ export function Methodology() {
                 </button>
                 <AnimatePresence initial={false}>
                   {isOpen && (
-                    <motion.div
+                    <m.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -68,7 +68,7 @@ export function Methodology() {
                       className="overflow-hidden"
                     >
                       <p className="pb-5 pl-14 pr-2 text-sm leading-relaxed text-(--color-muted)">{text}</p>
-                    </motion.div>
+                    </m.div>
                   )}
                 </AnimatePresence>
               </div>

@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { whatsappLink } from "../lib/constants";
@@ -16,7 +16,7 @@ export function WhatsAppFloat() {
   return (
     <AnimatePresence>
       {visible && (
-        <motion.a
+        <m.a
           href={whatsappLink()}
           target="_blank"
           rel="noopener noreferrer"
@@ -31,7 +31,7 @@ export function WhatsAppFloat() {
         >
           <span className="absolute inset-0 -z-10 animate-pulse-glow rounded-full bg-(--color-neon)/50 blur-xl" />
           <MessageCircle className="h-6 w-6" strokeWidth={2.4} fill="currentColor" />
-        </motion.a>
+        </m.a>
       )}
     </AnimatePresence>
   );

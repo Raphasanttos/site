@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   CheckCircle2,
   MessagesSquare,
@@ -80,7 +80,7 @@ export function Program() {
 
           <RevealGroup className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {modules.map(({ icon: Icon, title, text }, i) => (
-              <motion.div
+              <m.div
                 key={title}
                 variants={revealItem}
                 whileHover={{ y: -4 }}
@@ -94,7 +94,7 @@ export function Program() {
                 </div>
                 <h3 className="pr-8 font-display text-base font-semibold text-(--color-ivory)">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-(--color-muted)">{text}</p>
-              </motion.div>
+              </m.div>
             ))}
           </RevealGroup>
         </div>

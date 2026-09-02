@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { CheckCheck, Heart, MessageSquareText, Quote } from "lucide-react";
 import { Reveal, RevealGroup } from "./Reveal";
 import { revealItem } from "../lib/motion";
@@ -80,7 +80,7 @@ export function Testimonials() {
         </div>
 
         <RevealGroup className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3" stagger={0.16}>
-          <motion.div
+          <m.div
             variants={revealItem}
             whileHover={{ y: -4 }}
             className="flex flex-col rounded-2xl border border-(--color-neon)/25 bg-(--color-surface) p-5 shadow-[0_20px_60px_-30px_rgba(60,255,158,0.35)]"
@@ -100,10 +100,10 @@ export function Testimonials() {
               <Heart className="h-3.5 w-3.5 fill-(--color-neon) text-(--color-neon)" />
               {instagramFeatured.likes} · Comentário no Instagram
             </div>
-          </motion.div>
+          </m.div>
 
           {testimonials.map((t) => (
-            <motion.div
+            <m.div
               key={t.role}
               variants={revealItem}
               whileHover={{ y: -4 }}
@@ -131,7 +131,7 @@ export function Testimonials() {
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </RevealGroup>
       </div>

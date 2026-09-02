@@ -24,6 +24,10 @@ export function Mentor() {
                   src={mentorPhoto}
                   alt="Raphael Santos, mentor da Formação SDR"
                   className="h-full w-full object-cover object-top"
+                  width={799}
+                  height={1043}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-(--color-ink) via-(--color-ink)/70 to-transparent p-6">
                   <p className="font-display text-lg font-bold text-(--color-ivory)">Raphael Santos</p>

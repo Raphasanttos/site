@@ -89,7 +89,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-(--color-border) pt-8 text-xs text-(--color-muted-2) sm:flex-row">
           <p>© {new Date().getFullYear()} Formação SDR — Raphael Santos. Todos os direitos reservados.</p>
-          <p>Feito com foco em quem quer bater meta.</p>
+          <p>Desenvolvido por PMG Technology</p>
         </div>
       </div>
     </footer>

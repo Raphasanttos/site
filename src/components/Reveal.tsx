@@ -1,4 +1,4 @@
-import { motion, type Variants } from "framer-motion";
+import { m, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
 
 type Direction = "up" | "down" | "left" | "right" | "none";
@@ -36,7 +36,7 @@ export function Reveal({
     },
   };
 
-  const MotionTag = as === "span" ? motion.span : motion.div;
+  const MotionTag = as === "span" ? m.span : m.div;
 
   return (
     <MotionTag
@@ -61,7 +61,7 @@ export function RevealGroup({
   stagger?: number;
 }) {
   return (
-    <motion.div
+    <m.div
       className={className}
       initial="hidden"
       whileInView="show"
@@ -72,7 +72,7 @@ export function RevealGroup({
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 

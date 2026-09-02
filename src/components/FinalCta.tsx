@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { whatsappLink } from "../lib/constants";
@@ -9,11 +8,9 @@ export function FinalCta() {
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
         <Reveal>
           <div className="relative overflow-hidden rounded-[2rem] border border-(--color-neon)/25 bg-gradient-to-br from-(--color-surface) via-(--color-ink-2) to-(--color-navy)/40 px-6 py-16 text-center sm:px-16">
-            <motion.div
+            <div
               aria-hidden
-              className="pointer-events-none absolute -top-24 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-(--color-neon)/25 blur-[100px]"
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="pointer-events-none absolute -top-24 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-(--color-neon)/25 blur-[100px] animate-pulse-glow"
             />
             <div className="relative">
               <h2 className="font-display text-3xl font-bold leading-tight text-(--color-ivory) sm:text-5xl">

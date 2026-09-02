@@ -1,3 +1,4 @@
+import { LazyMotion, domAnimation } from "framer-motion";
 import { B2B } from "./components/B2B";
 import { FinalCta } from "./components/FinalCta";
 import { Footer } from "./components/Footer";
@@ -12,21 +13,23 @@ import { WhatsAppFloat } from "./components/WhatsAppFloat";
 
 function App() {
   return (
-    <div className="min-h-screen bg-(--color-ink)">
-      <ScrollProgress />
-      <Navbar />
-      <main>
-        <Hero />
-        <Problem />
-        <Program />
-        <Mentor />
-        <Testimonials />
-        <B2B />
-        <FinalCta />
-      </main>
-      <Footer />
-      <WhatsAppFloat />
-    </div>
+    <LazyMotion features={domAnimation} strict>
+      <div className="min-h-screen bg-(--color-ink)">
+        <ScrollProgress />
+        <Navbar />
+        <main>
+          <Hero />
+          <Problem />
+          <Program />
+          <Mentor />
+          <Testimonials />
+          <B2B />
+          <FinalCta />
+        </main>
+        <Footer />
+        <WhatsAppFloat />
+      </div>
+    </LazyMotion>
   );
 }
 

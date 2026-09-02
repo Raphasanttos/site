@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { AnimatePresence, m, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 import { NAV_LINKS, whatsappLink } from "../lib/constants";
@@ -60,7 +60,7 @@ export function Navbar() {
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -88,7 +88,7 @@ export function Navbar() {
                 Garantir minha vaga
               </a>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>
