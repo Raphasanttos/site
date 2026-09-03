@@ -26,11 +26,14 @@ export function Pricing() {
             />
             <div className="relative rounded-[1.75rem] border border-(--color-neon)/25 bg-(--color-surface) px-6 py-12 sm:px-12">
               <p className="text-lg text-(--color-muted-2) line-through">R$ 797,00</p>
-              <p className="mt-1 font-display text-5xl font-bold text-(--color-neon) sm:text-6xl">
-                R$ 497,00
+              <p className="mt-1 font-display text-4xl font-bold text-(--color-neon) sm:text-5xl">
+                12x de R$ 49,70
+              </p>
+              <p className="mt-2 text-base text-(--color-ivory)">
+                ou <span className="font-bold text-(--color-neon-soft)">R$ 497,00</span> à vista
               </p>
               <p className="mt-3 text-xs font-bold uppercase tracking-widest text-(--color-muted-2)">
-                À vista: Pix ou cartão de crédito
+                Pix ou cartão de crédito
               </p>
 
               <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-(--color-muted)">
