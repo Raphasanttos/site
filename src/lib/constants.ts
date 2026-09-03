@@ -17,5 +17,6 @@ export const NAV_LINKS = [
   { label: "Para você", href: "#para-quem" },
   { label: "Mentor", href: "#mentor" },
   { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Investimento", href: "#investimento" },
   { label: "Para empresas", href: "#empresas" },
 ];

@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Mentor } from "./components/Mentor";
 import { Navbar } from "./components/Navbar";
+import { Pricing } from "./components/Pricing";
 import { Problem } from "./components/Problem";
 import { Program } from "./components/Program";
 import { ScrollProgress } from "./components/ScrollProgress";
@@ -23,6 +24,7 @@ function App() {
           <Program />
           <Mentor />
           <Testimonials />
+          <Pricing />
           <B2B />
           <FinalCta />
         </main>
