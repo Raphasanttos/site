@@ -56,6 +56,21 @@ const quotes = [
     role: "Aluna da Formação SDR",
     text: "Cara, realmente me encontrei nessa área. Mais uma vez, só tenho a agradecer a você.",
   },
+  {
+    name: "Carlos Closer",
+    role: "Aluno da Formação SDR",
+    text: "O Rapha tem um repertório excelente, que consegue trazer clareza de execução do processo necessário para ter o resultado esperado. Excelente professor!",
+  },
+  {
+    name: "Gabriella Bittencourt",
+    role: "Aluna da Formação SDR",
+    text: "Meu brigadão pela mentoria, 4 encontros que foram sensacionais, o time está indo muito bem, chegamos a bater até a meta do mês em tempo record! Os materiais bônus ajudaram muito também. Que entrega topp que você tem!",
+  },
+  {
+    name: "Dennys",
+    role: "Aluno da Formação SDR",
+    text: "A formação foi uma das melhores escolhas que eu fiz, muito conteúdo enriquecedor, e tenho certeza que irá agregar demais na minha carreira. Indico de olhos fechados para qualquer um.",
+  },
 ];
 
 export function Testimonials() {
