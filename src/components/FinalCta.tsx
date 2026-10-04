@@ -1,6 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { whatsappLink } from "../lib/constants";
+import { CHECKOUT_LINK, whatsappLink } from "../lib/constants";
 
 export function FinalCta() {
   return (
@@ -17,17 +17,29 @@ export function FinalCta() {
                 Sua vaga como SDR está mais perto do que você imagina
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-(--color-muted) sm:text-lg">
-                Fale agora comigo no WhatsApp e garanta sua vaga na próxima turma da Formação SDR.
+                Garanta sua vaga agora mesmo ou, se preferir, tire suas dúvidas comigo antes no
+                WhatsApp.
               </p>
-              <a
-                href={whatsappLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group mt-9 inline-flex items-center gap-2 rounded-full bg-(--color-neon) px-9 py-4 text-base font-bold text-(--color-ink) shadow-[0_0_40px_-8px_rgba(60,255,158,0.7)] transition-transform hover:scale-[1.03]"
-              >
-                Quero garantir minha vaga agora
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </a>
+              <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <a
+                  href={whatsappLink("Olá, Raphael! Tenho uma dúvida sobre a Formação SDR.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-(--color-border) px-7 py-4 text-sm font-bold text-(--color-ivory) transition-colors hover:border-(--color-neon)/50 hover:text-(--color-neon)"
+                >
+                  <MessageCircle className="h-4 w-4" strokeWidth={2.5} />
+                  Suporte no WhatsApp
+                </a>
+                <a
+                  href={CHECKOUT_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 rounded-full bg-(--color-neon) px-9 py-4 text-base font-bold text-(--color-ink) shadow-[0_0_40px_-8px_rgba(60,255,158,0.7)] transition-transform hover:scale-[1.03]"
+                >
+                  Quero garantir minha vaga agora
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </a>
+              </div>
             </div>
           </div>
         </Reveal>

@@ -5,6 +5,8 @@ export function whatsappLink(message: string = DEFAULT_MESSAGE) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
+export const CHECKOUT_LINK = "https://pay.kiwify.com.br/0RBNFTP";
+
 export const CONTACT = {
   phoneDisplay: "+55 31 7116-0592",
   email: "Phaelsanttos7@gmail.com",
@@ -18,5 +20,5 @@ export const NAV_LINKS = [
   { label: "Mentor", href: "#mentor" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Investimento", href: "#investimento" },
-  { label: "Para empresas", href: "#empresas" },
+  // { label: "Para empresas", href: "#empresas" }, // volta junto com a seção B2B
 ];

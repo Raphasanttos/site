@@ -1,5 +1,5 @@
 import { LazyMotion, domAnimation } from "framer-motion";
-import { B2B } from "./components/B2B";
+// import { B2B } from "./components/B2B"; // seção "Para empresas" tirada do ar por enquanto a pedido do cliente
 import { FinalCta } from "./components/FinalCta";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
@@ -25,7 +25,7 @@ function App() {
           <Mentor />
           <Testimonials />
           <Pricing />
-          <B2B />
+          {/* <B2B /> */}
           <FinalCta />
         </main>
         <Footer />
