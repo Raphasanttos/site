@@ -23,6 +23,26 @@ const testimonials = [
       "Vi o trabalho que você vem construindo com a Escola SDR e curti muito a forma como você posiciona a formação pra quem quer realmente bater meta e evoluir em pré vendas. Muito bom seu trabalho, parabéns 👏🏽",
     reply: "O meu irmão, obrigado pelo seu feedback! Deus colocou esse projeto no meu coração e aos poucos venho avançando.",
   },
+  {
+    name: "Carlos Closer",
+    role: "Aluno da Formação SDR",
+    message:
+      "O Rapha tem um repertório excelente, que consegue trazer clareza de execução do processo necessário para ter o resultado esperado. Excelente professor!",
+  },
+  {
+    name: "Gabriella Bittencourt",
+    role: "Aluna da Formação SDR",
+    message:
+      "Meu brigadão pela mentoria, 4 encontros que foram sensacionais, o time está indo muito bem, chegamos a bater até a meta do mês em tempo record! Todo mundo achou massa de mais cada aula, os materiais bônus ajudaram muito também. Valeuuuu, que entrega topp que você tem! 🙏👏",
+    reply: "Legaal demais Gabi!! Conta comigo sempre 🙌🚀🔥",
+  },
+  {
+    name: "Dennys",
+    role: "Aluno da Formação SDR",
+    message:
+      "Boa tarde irmão, a formação foi uma das melhores escolhas que eu fiz, muito conteúdo enriquecedor e tenho certeza que irá agregar demais na minha carreira. Indico de olhos fechados para qualquer um 🚀",
+    reply: "Massa demais irmão! Certeza que vai ter muito sucesso nessa carreira 🙏🚀🙌",
+  },
 ];
 
 const quotes = [
@@ -119,7 +139,7 @@ export function Testimonials() {
 
           {testimonials.map((t) => (
             <m.div
-              key={t.role}
+              key={t.name ?? t.role}
               variants={revealItem}
               whileHover={{ y: -4 }}
               className="rounded-2xl border border-(--color-border) bg-(--color-surface) p-2 shadow-[0_20px_60px_-30px_rgba(60,255,158,0.25)]"
@@ -134,17 +154,22 @@ export function Testimonials() {
               <div className="space-y-3 p-4">
                 <div className="max-w-[92%] rounded-2xl rounded-tl-sm bg-(--color-surface-2) px-4 py-3">
                   <p className="text-sm leading-relaxed text-(--color-ivory)">{t.message}</p>
-                  <span className="mt-1 block text-[11px] font-medium text-(--color-muted-2)">{t.role}</span>
+                  {t.name && (
+                    <span className="mt-1 block text-[11px] font-semibold text-(--color-neon-soft)">{t.name}</span>
+                  )}
+                  <span className="mt-0.5 block text-[11px] font-medium text-(--color-muted-2)">{t.role}</span>
                 </div>
 
-                <div className="ml-auto flex max-w-[92%] flex-col items-end">
-                  <div className="rounded-2xl rounded-tr-sm bg-(--color-neon)/15 px-4 py-3">
-                    <p className="text-sm leading-relaxed text-(--color-neon-soft)">{t.reply}</p>
+                {t.reply && (
+                  <div className="ml-auto flex max-w-[92%] flex-col items-end">
+                    <div className="rounded-2xl rounded-tr-sm bg-(--color-neon)/15 px-4 py-3">
+                      <p className="text-sm leading-relaxed text-(--color-neon-soft)">{t.reply}</p>
+                    </div>
+                    <span className="mt-1 flex items-center gap-1 text-[11px] font-medium text-(--color-muted-2)">
+                      Raphael <CheckCheck className="h-3.5 w-3.5 text-(--color-neon)" />
+                    </span>
                   </div>
-                  <span className="mt-1 flex items-center gap-1 text-[11px] font-medium text-(--color-muted-2)">
-                    Raphael <CheckCheck className="h-3.5 w-3.5 text-(--color-neon)" />
-                  </span>
-                </div>
+                )}
               </div>
             </m.div>
           ))}
