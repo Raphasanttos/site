@@ -6,10 +6,11 @@ import {
   Radar,
   Sparkles,
   Target,
+  Users,
 } from "lucide-react";
 import { Reveal, RevealGroup } from "./Reveal";
 import { revealItem } from "../lib/motion";
-import { whatsappLink } from "../lib/constants";
+import { CHECKOUT_LINK } from "../lib/constants";
 
 const modules = [
   {
@@ -42,6 +43,11 @@ const modules = [
     title: "Acompanhamento próximo",
     text: "Mentoria direta, tira-dúvidas e ajustes de rota até você conquistar sua primeira oportunidade.",
   },
+  {
+    icon: Users,
+    title: "Grupos de vagas e networking",
+    text: "Acesso a grupos com vagas diariamente e grupos de networking com empresários, recrutadores e gerentes comerciais buscando por profissionais de pré-vendas todos os dias.",
+  },
 ];
 
 export function Program() {
@@ -69,7 +75,7 @@ export function Program() {
             </Reveal>
             <Reveal delay={0.18}>
               <a
-                href={whatsappLink()}
+                href={CHECKOUT_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-(--color-neon) px-7 py-3.5 text-sm font-bold text-(--color-ink) shadow-[0_0_30px_-8px_rgba(60,255,158,0.6)] transition-transform hover:scale-[1.03]"

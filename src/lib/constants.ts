@@ -10,7 +10,7 @@ export const CHECKOUT_LINK = "https://pay.kiwify.com.br/0RBNFTP";
 export const CONTACT = {
   phoneDisplay: "+55 31 7116-0592",
   email: "Phaelsanttos7@gmail.com",
-  instagram: "https://www.instagram.com/raphaelsanttos7",
+  instagram: "https://www.instagram.com/euraphaelsantos_",
   linkedin: "https://www.linkedin.com/in/raphael-pereiradossantos",
 };
 

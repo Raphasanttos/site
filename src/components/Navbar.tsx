@@ -1,7 +1,7 @@
 import { AnimatePresence, m, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { NAV_LINKS, whatsappLink } from "../lib/constants";
+import { CHECKOUT_LINK, NAV_LINKS } from "../lib/constants";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,12 +39,12 @@ export function Navbar() {
 
         <div className="hidden lg:block">
           <a
-            href={whatsappLink()}
+            href={CHECKOUT_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full bg-(--color-neon) px-5 py-2.5 text-sm font-bold text-(--color-ink) shadow-[0_0_0_0_rgba(60,255,158,0.6)] transition-all hover:shadow-[0_0_28px_2px_rgba(60,255,158,0.55)]"
           >
-            <MessageCircle className="h-4 w-4" strokeWidth={2.5} />
+            <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             Garantir minha vaga
           </a>
         </div>
@@ -79,12 +79,12 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href={whatsappLink()}
+                href={CHECKOUT_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-(--color-neon) px-5 py-3 text-sm font-bold text-(--color-ink)"
               >
-                <MessageCircle className="h-4 w-4" strokeWidth={2.5} />
+                <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
                 Garantir minha vaga
               </a>
             </div>

@@ -1,5 +1,5 @@
-import { MessageCircle } from "lucide-react";
-import { whatsappLink } from "../lib/constants";
+import { ArrowRight } from "lucide-react";
+import { CHECKOUT_LINK } from "../lib/constants";
 import { Reveal } from "./Reveal";
 
 export function Pricing() {
@@ -43,13 +43,13 @@ export function Pricing() {
               </p>
 
               <a
-                href={whatsappLink("Olá, Raphael! Quero garantir minha vaga na Formação SDR por R$497.")}
+                href={CHECKOUT_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group mt-8 inline-flex items-center gap-2 rounded-full bg-(--color-neon) px-8 py-4 text-sm font-bold uppercase tracking-wide text-(--color-ink) shadow-[0_0_40px_-8px_rgba(60,255,158,0.7)] transition-transform hover:scale-[1.03]"
               >
-                <MessageCircle className="h-4 w-4" strokeWidth={2.5} />
                 Quero entrar na Formação agora
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>

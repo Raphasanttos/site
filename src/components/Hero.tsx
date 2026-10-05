@@ -1,5 +1,5 @@
 import { ArrowRight, Radio, Target, Users2 } from "lucide-react";
-import { whatsappLink } from "../lib/constants";
+import { CHECKOUT_LINK } from "../lib/constants";
 import { Reveal } from "./Reveal";
 
 const bullets = [
@@ -53,7 +53,7 @@ export function Hero() {
         <Reveal delay={0.24}>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <a
-              href={whatsappLink()}
+              href={CHECKOUT_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-(--color-neon) px-8 py-4 text-base font-bold text-(--color-ink) shadow-[0_0_40px_-8px_rgba(60,255,158,0.7)] transition-transform hover:scale-[1.03]"
