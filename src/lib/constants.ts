@@ -5,7 +5,9 @@ export function whatsappLink(message: string = DEFAULT_MESSAGE) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-export const CHECKOUT_LINK = "https://pay.kiwify.com.br/0RBNFTP";
+// Link curto do WhatsApp Business: a mensagem pré-preenchida
+// ("Oi Rapha! Tenho interesse na Formação SDR 📚🚀") é configurada no próprio app.
+export const CHECKOUT_LINK = "https://wa.me/message/CGBMYCFBT6M6P1";
 
 export const CONTACT = {
   phoneDisplay: "+55 31 7116-0592",
