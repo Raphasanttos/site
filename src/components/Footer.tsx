@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold text-(--color-ivory)">
+            <a href="/#top" className="flex items-center gap-2 font-display text-lg font-bold text-(--color-ivory)">
               Formação SDR
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-(--color-muted)">
@@ -21,7 +21,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="text-sm text-(--color-muted) transition-colors hover:text-(--color-neon)">
+                  <a href={`/${l.href}`} className="text-sm text-(--color-muted) transition-colors hover:text-(--color-neon)">
                     {l.label}
                   </a>
                 </li>
@@ -89,7 +89,15 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-(--color-border) pt-8 text-xs text-(--color-muted-2) sm:flex-row">
           <p>© {new Date().getFullYear()} Formação SDR — Raphael Santos. Todos os direitos reservados.</p>
-          <p>Desenvolvido por PMG Technology</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <a href="/politica-de-privacidade" className="transition-colors hover:text-(--color-neon)">
+              Política de Privacidade
+            </a>
+            <a href="/politica-de-cookies" className="transition-colors hover:text-(--color-neon)">
+              Política de Cookies
+            </a>
+            <p>Desenvolvido por PMG Technology</p>
+          </div>
         </div>
       </div>
     </footer>

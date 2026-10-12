@@ -1,5 +1,6 @@
 import { LazyMotion, domAnimation } from "framer-motion";
 // import { B2B } from "./components/B2B"; // seção "Para empresas" tirada do ar por enquanto a pedido do cliente
+import { CookieBanner } from "./components/CookieBanner";
 import { FinalCta } from "./components/FinalCta";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
@@ -11,8 +12,26 @@ import { Program } from "./components/Program";
 import { ScrollProgress } from "./components/ScrollProgress";
 import { Testimonials } from "./components/Testimonials";
 import { WhatsAppFloat } from "./components/WhatsAppFloat";
+import { CookiePolicy } from "./pages/CookiePolicy";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+
+const LEGAL_PAGES: Record<string, () => React.JSX.Element> = {
+  "/politica-de-privacidade": PrivacyPolicy,
+  "/politica-de-cookies": CookiePolicy,
+};
 
 function App() {
+  const LegalPage = LEGAL_PAGES[window.location.pathname.replace(/\/+$/, "")];
+
+  if (LegalPage) {
+    return (
+      <LazyMotion features={domAnimation} strict>
+        <LegalPage />
+        <CookieBanner />
+      </LazyMotion>
+    );
+  }
+
   return (
     <LazyMotion features={domAnimation} strict>
       <div className="min-h-screen bg-(--color-ink)">
@@ -30,6 +49,7 @@ function App() {
         </main>
         <Footer />
         <WhatsAppFloat />
+        <CookieBanner />
       </div>
     </LazyMotion>
   );
