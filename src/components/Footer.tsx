@@ -9,10 +9,10 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <a href="/#top" className="flex items-center gap-2 font-display text-lg font-bold text-(--color-ivory)">
-              Formação SDR
+              Escola SDR
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-(--color-muted)">
-              Mentoria ao vivo que forma profissionais de pré-vendas do zero, mesmo sem experiência em vendas.
+              Formação ao vivo que capacita profissionais de pré-vendas do zero, mesmo para quem não tem experiência em vendas.
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-(--color-border) pt-8 text-xs text-(--color-muted-2) sm:flex-row">
-          <p>© {new Date().getFullYear()} Formação SDR — Raphael Santos. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Escola SDR — Raphael Santos. Todos os direitos reservados.</p>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             <a href="/politica-de-privacidade" className="transition-colors hover:text-(--color-neon)">
               Política de Privacidade

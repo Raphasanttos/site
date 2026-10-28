@@ -64,12 +64,12 @@ export function Program() {
             <Reveal delay={0.06}>
               <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-(--color-ivory) sm:text-4xl">
                 Tudo que você precisa pra sair do absoluto zero e garantir sua vaga no mercado
-                que mais cresce no 🇧🇷
+                que mais cresce no Brasil
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
               <p className="mt-5 text-(--color-muted)">
-                Uma mentoria 100% ao vivo, com 3 encontros diretos ao ponto — sem enrolação,
+                Uma formação 100% ao vivo, com 3 encontros diretos ao ponto — sem enrolação,
                 sem teoria solta. Você aprende fazendo, com quem já viveu a rotina de bater meta.
               </p>
             </Reveal>
