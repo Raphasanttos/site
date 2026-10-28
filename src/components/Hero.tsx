@@ -31,22 +31,27 @@ export function Hero() {
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-(--color-neon)/30 bg-(--color-neon)/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-(--color-neon-soft)">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-(--color-neon)" />
-            A porta de entrada mais rápida para o mercado de tecnologia
+            <span>
+              Seja bem-vindo à <strong className="font-bold text-(--color-neon)">Escola SDR</strong>
+            </span>
           </span>
         </Reveal>
 
         <Reveal delay={0.08}>
           <h1 className="mt-7 font-display text-4xl font-bold leading-[1.08] tracking-tight text-(--color-ivory) sm:text-6xl lg:text-[4.2rem]">
-            Saia do emprego que você não aguenta mais e atue em uma das{" "}
-            <span className="text-gradient">carreiras que mais crescem</span> no Brasil
-            <br className="hidden sm:block" /> — mesmo sem experiência em vendas
+            O principal ecossistema de{" "}
+            <span className="text-gradient">educação e formação de SDRs</span> para o mercado de{" "}
+            <span className="whitespace-nowrap">Pré-vendas</span> do Brasil.
           </h1>
         </Reveal>
 
         <Reveal delay={0.16}>
           <p className="mt-6 max-w-2xl text-balance text-lg text-(--color-muted) sm:text-xl">
-            Uma mentoria ao vivo que forma profissionais de pré-vendas do zero. Em semanas,
-            você sai preparado para conquistar sua primeira vaga como SDR.
+            Formação ao vivo que capacita SDRs e BDRs do zero, mesmo para quem não tem experiência
+            em vendas. Em poucos dias você sai preparado para conquistar sua primeira vaga como SDR.{" "}
+            <strong className="font-semibold text-(--color-ivory)">
+              Na maioria das vagas sendo HOME OFFICE.
+            </strong>
           </p>
         </Reveal>
 

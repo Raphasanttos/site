@@ -25,7 +25,7 @@ export function Mentor() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-(--color-border) bg-(--color-surface-2)">
                 <img
                   src={mentorPhoto}
-                  alt="Raphael Santos, mentor da Formação SDR"
+                  alt="Raphael Santos, fundador da Escola SDR"
                   className="h-full w-full object-cover object-top"
                   width={799}
                   height={1043}
@@ -34,7 +34,7 @@ export function Mentor() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-(--color-ink) via-(--color-ink)/70 to-transparent p-6">
                   <p className="font-display text-lg font-bold text-(--color-ivory)">Raphael Santos</p>
-                  <p className="text-sm text-(--color-neon-soft)">Fundador — Formação SDR</p>
+                  <p className="text-sm text-(--color-neon-soft)">Fundador — Escola SDR</p>
                 </div>
               </div>
               <div className="mt-5 flex justify-center gap-3">
@@ -75,7 +75,7 @@ export function Mentor() {
                 <Quote className="h-6 w-6 text-(--color-neon)/50" />
                 <p className="mt-3 text-(--color-muted) leading-relaxed">
                   Deus colocou esse projeto no meu coração há um tempo e aos poucos venho avançando
-                  e, de alguma forma, mudando vidas. A Formação SDR nasceu para posicionar quem
+                  e, de alguma forma, mudando vidas. A Escola SDR nasceu para posicionar quem
                   quer realmente bater meta e evoluir em pré-vendas — sem enrolação, direto ao ponto.
                 </p>
                 <p className="mt-4 text-(--color-muted) leading-relaxed">

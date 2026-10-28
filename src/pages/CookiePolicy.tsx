@@ -5,7 +5,7 @@ export function CookiePolicy() {
   return (
     <LegalLayout title="Política de Cookies" updatedAt="12 de outubro de 2026">
       <p>
-        Esta Política de Cookies explica o que são cookies e como o site da <strong>Formação SDR</strong> usa
+        Esta Política de Cookies explica o que são cookies e como o site da <strong>Escola SDR</strong> usa
         essa e outras tecnologias semelhantes. Ela complementa a nossa{" "}
         <a href="/politica-de-privacidade">Política de Privacidade</a>.
       </p>

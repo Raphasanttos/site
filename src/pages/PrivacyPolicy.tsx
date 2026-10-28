@@ -5,14 +5,13 @@ export function PrivacyPolicy() {
   return (
     <LegalLayout title="Política de Privacidade" updatedAt="12 de outubro de 2026">
       <p>
-        Esta Política de Privacidade explica como a <strong>Formação SDR</strong>, mentoria conduzida por Raphael
-        Santos ("nós"), trata as informações das pessoas que visitam este site e entram em contato conosco, em
+        Esta Política de Privacidade explica como a <strong>Escola SDR</strong>, conduzida por Raphael Santos ("nós"), trata as informações das pessoas que visitam este site e entram em contato conosco, em
         conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).
       </p>
 
       <h2>1. Quem é o responsável pelos seus dados</h2>
       <p>
-        O controlador dos dados pessoais é Raphael Santos, responsável pela Formação SDR. Para qualquer assunto
+        O controlador dos dados pessoais é Raphael Santos, responsável pela Escola SDR. Para qualquer assunto
         relacionado a privacidade, fale com a gente pelo e-mail{" "}
         <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
       </p>

@@ -14,7 +14,7 @@ export function LegalLayout({ title, updatedAt, children }: Props) {
       <header className="border-b border-(--color-border) bg-(--color-ink-2)">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-5 sm:px-8">
           <a href="/" className="font-display text-lg font-bold text-(--color-ivory)">
-            Formação SDR
+            Escola SDR
           </a>
           <a
             href="/"
